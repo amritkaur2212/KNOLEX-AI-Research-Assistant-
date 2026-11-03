@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f7fc">
+    <title>KNOLEX — AI Research Workspace</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="/">
+                <span class="brand-mark">K</span>
+                <span>KNOLEX<small>RESEARCH STUDIO</small></span>
+            </a>
+
+            <div class="workspace-label">WORKSPACE</div>
+
+            <nav class="navigation">
+                <button class="nav-item active" data-view="home">⌂ <span>Overview</span></button>
+                <button class="nav-item" data-view="library">▤ <span>My Library</span></button>
+                <button class="nav-item" data-view="ask">✳ <span>Ask your papers</span></button>
+                <button class="nav-item" data-view="summarize">≡ <span>Summarize</span></button>
+                <button class="nav-item" data-view="compare">⇄ <span>Compare papers</span></button>
+                <button class="nav-item" data-view="writing">✎ <span>Writing studio</span></button>
+                <button class="nav-item" data-view="citations">❝ <span>Citation finder</span></button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="plan-card">
+                    <span class="plan-icon">✦</span>
+                    <strong>Your research, simplified.</strong>
+                    <p>Read smarter. Discover more.</p>
+                </div>
+                <button id="themeToggle" class="theme-toggle">☾ <span>Switch appearance</span></button>
+                <div class="profile"><span class="avatar">A</span><span><strong>Researcher</strong><small>My workspace</small></span></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumbPage">Overview</strong></div>
+                <div class="topbar-right"><span class="status-dot"></span> Your research workspace <span class="top-avatar">A</span></div>
+            </header>
+
+            <section class="page-content">
+                <div class="welcome-row">
+                    <div>
+                        <div class="eyebrow">YOUR ACADEMIC COMPANION</div>
+                        <h1 id="pageTitle">Research, <span>reimagined.</span></h1>
+                        <p id="pageSubtitle">A calmer space to explore papers, connect ideas, and write with confidence.</p>
+                    </div>
+                    <div class="date-chip">✦ &nbsp; YOUR IDEAS, IN FOCUS</div>
+                </div>
+
+                <section class="hero">
+                    <div class="hero-copy">
+                        <span class="hero-tag">✦ &nbsp; YOUR AI RESEARCH ASSISTANT</span>
+                        <h2>From dense papers<br>to <em>clear discoveries.</em></h2>
+                        <p>Bring your research together. Ask thoughtful questions, find the important details, and spend more time on the ideas that matter.</p>
+                        <button class="primary-button" data-action="upload">＋ Upload a research paper <span>→</span></button>
+                    </div>
+                    <div class="hero-art" aria-hidden="true">
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="paper-illustration">
+                            <div class="paper-top"></div>
+                            <div class="paper-title"></div>
+                            <div class="paper-line"></div>
+                            <div class="paper-line short"></div>
+                            <div class="paper-chart"><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="paper-line"></div>
+                            <div class="paper-line short"></div>
+                        </div>
+                        <span class="float-chip chip-one">✦ AI insights</span>
+                        <span class="float-chip chip-two">↗ New ideas</span>
+                    </div>
+                </section>
+
+                <section class="stats-grid">
+                    <article class="stat-card"><span class="stat-icon lilac">▤</span><div><p>Research papers</p><strong id="paperCount">0</strong></div><small>In your library</small></article>
+                    <article class="stat-card"><span class="stat-icon mint">✳</span><div><p>AI conversations</p><strong id="questionCount">0</strong></div><small>Questions explored</small></article>
+                    <article class="stat-card"><span class="stat-icon peach">≡</span><div><p>Summaries</p><strong id="summaryCount">0</strong></div><small>Ideas made clearer</small></article>
+                </section>
+
+                <section class="section-heading"><div><h2>What would you like to explore?</h2><p>Choose a tool and let your research journey begin.</p></div></section>
+
+                <section class="tools-grid">
+                    <button class="tool-card" data-view="ask"><span class="tool-icon lilac">✳</span><span class="tool-arrow">↗</span><h3>Ask your papers</h3><p>Get answers grounded in your uploaded research, with page references.</p><span class="tool-link">Start exploring →</span></button>
+                    <button class="tool-card" data-view="summarize"><span class="tool-icon mint">≡</span><span class="tool-arrow">↗</span><h3>Smart summaries</h3><p>Understand key findings, methods, and conclusions faster.</p><span class="tool-link">Create a summary →</span></button>
+                    <button class="tool-card" data-view="compare"><span class="tool-icon peach">⇄</span><span class="tool-arrow">↗</span><h3>Compare papers</h3><p>Explore similarities, differences, and research gaps across studies.</p><span class="tool-link">Compare research →</span></button>
+                    <button class="tool-card" data-view="writing"><span class="tool-icon blue">✎</span><span class="tool-arrow">↗</span><h3>Writing studio</h3><p>Improve clarity, grammar, and the flow of your academic writing.</p><span class="tool-link">Open writing studio →</span></button>
+                </section>
+
+                <section class="library-section" id="librarySection">
+                    <div class="section-heading library-heading"><div><h2>Your research library</h2><p>All your uploaded papers, gathered in one place.</p></div><button class="text-button" data-view="library">View library →</button></div>
+                    <div id="paperList" class="empty-library">
+                        <div class="empty-icon">▤</div>
+                        <h3>Your library starts here</h3>
+                        <p>Upload your first PDF to begin building your personal research collection.</p>
+                        <button class="secondary-button" data-action="upload">Choose a PDF</button>
+                    </div>
+                </section>
+
+                <section id="workspacePanel" class="workspace-panel hidden">
+                    <div class="section-heading"><div><h2 id="panelTitle">Research workspace</h2><p id="panelSubtitle">Explore your documents.</p></div></div>
+                    <div id="panelBody"></div>
+                </section>
+
+                <input id="pdfInput" type="file" accept=".pdf,application/pdf" hidden>
+                <div id="toast" class="toast" role="status"></div>
+
+                <footer>Made for curious minds. <span>KNOLEX · AI RESEARCH STUDIO</span></footer>
+            </section>
+        </main>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

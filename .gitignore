@@ -1,0 +1,25 @@
+﻿# Environment variables and secrets
+.env
+**/.env
+
+# Python virtual environments
+venv/
+**/venv/
+.venv/
+**/.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Vector databases
+chroma_db/
+**/chroma_db/
+
+# Uploaded documents
+**/uploads/
+
+# Editor settings
+.vscode/
+**/.vscode/
